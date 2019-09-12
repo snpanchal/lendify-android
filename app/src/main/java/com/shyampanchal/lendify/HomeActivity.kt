@@ -1,9 +1,9 @@
 package com.shyampanchal.lendify
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
-import com.shyampanchal.lendify.utils.UrlManager
+import com.shyampanchal.lendify.viewmodels.HomeViewModel
 
 class HomeActivity : AppCompatActivity() {
 
@@ -11,6 +11,6 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val vm = ViewModelProviders.of(this@HomeActivity).get()
+        val vm = ViewModelProviders.of(this).get(HomeViewModel::class.java)
     }
 }
