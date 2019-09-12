@@ -1,5 +1,6 @@
 package com.shyampanchal.lendify.viewmodels
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import com.shyampanchal.lendify.R
 import com.shyampanchal.lendify.api.ItemsApi
@@ -31,13 +32,6 @@ class HomeViewModel : BaseViewModel() {
                 { onRetrieveItemsSuccess(it) },
                 { onRetrieveItemsError() }
             )
-
-    }
-
-
-    override fun onCleared() {
-        super.onCleared()
-        disposable.dispose()
     }
 
     private fun onRetrieveItemsSuccess(listOfItems: List<Item>) {
@@ -46,5 +40,10 @@ class HomeViewModel : BaseViewModel() {
 
     private fun onRetrieveItemsError() {
         errorMessage.value = R.string.post_error
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        disposable.dispose()
     }
 }
