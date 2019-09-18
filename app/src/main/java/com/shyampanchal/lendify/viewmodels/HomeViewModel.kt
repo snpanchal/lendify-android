@@ -1,6 +1,5 @@
 package com.shyampanchal.lendify.viewmodels
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import com.shyampanchal.lendify.R
 import com.shyampanchal.lendify.api.ItemsApi
@@ -29,17 +28,9 @@ class HomeViewModel : BaseViewModel() {
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(
-                { onRetrieveItemsSuccess(it) },
-                { onRetrieveItemsError() }
+                { itemsList.value = it },
+                { errorMessage.value = R.string.post_error }
             )
-    }
-
-    private fun onRetrieveItemsSuccess(listOfItems: List<Item>) {
-        itemsList.value = listOfItems
-    }
-
-    private fun onRetrieveItemsError() {
-        errorMessage.value = R.string.post_error
     }
 
     override fun onCleared() {
