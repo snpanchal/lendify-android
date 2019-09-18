@@ -29,7 +29,7 @@ class HomeActivity : AppCompatActivity() {
                         itemView {
                             id(idValue)
                             name(it.itemName)
-                            startDate(it.startTime)
+                            startTime(it.startTime)
                             endTime(it.endTime)
                             idValue++
                         }
