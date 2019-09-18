@@ -21,12 +21,12 @@ class ItemView(context: Context) : ConstraintLayout(context) {
     }
 
     @TextProp
-    fun key1(key1: CharSequence) {
-        key_1.text = key1
+    fun startTime(startTime: CharSequence) {
+        item_start_time.text = startTime
     }
 
     @TextProp
-    fun key2(key2: CharSequence) {
-        key_2.text = key2
+    fun endTime(endTime: CharSequence) {
+        item_end_time.text = endTime
     }
 }
