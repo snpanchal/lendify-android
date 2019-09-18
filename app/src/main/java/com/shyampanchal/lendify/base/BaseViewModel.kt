@@ -1,8 +1,8 @@
 package com.shyampanchal.lendify.base
 
 import androidx.lifecycle.ViewModel
+import com.shyampanchal.lendify.di.DaggerViewModelInjector
 import com.shyampanchal.lendify.di.NetworkModule
-import com.shyampanchal.lendify.injection.component.DaggerViewModelInjector
 import com.shyampanchal.lendify.di.ViewModelInjector
 import com.shyampanchal.lendify.viewmodels.HomeViewModel
 
