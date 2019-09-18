@@ -6,6 +6,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import com.shyampanchal.lendify.utils.DateUtils
 import com.shyampanchal.lendify.viewmodels.HomeViewModel
 import com.shyampanchal.lendify.views.itemView
 import kotlinx.android.synthetic.main.activity_home.*
@@ -26,14 +27,16 @@ class HomeActivity : AppCompatActivity() {
                     itemsList
                         .filterNotNull()
                         .forEach {
-                        itemView {
-                            id(idValue)
-                            name(it.itemName)
-                            startTime(it.startTime)
-                            endTime(it.endTime)
-                            idValue++
+                            itemView {
+                                id(idValue)
+                                name(it.itemName)
+                                val startDate = DateUtils.convertUnixToDate(it.startTime)
+                                startTime(DateUtils.getFormattedDateText(startDate))
+                                val endDate = DateUtils.convertUnixToDate(it.endTime)
+                                endTime(DateUtils.getFormattedDateText(endDate))
+                                idValue++
+                            }
                         }
-                    }
                 }
             }
         })

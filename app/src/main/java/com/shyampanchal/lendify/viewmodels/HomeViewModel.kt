@@ -16,7 +16,7 @@ class HomeViewModel : BaseViewModel() {
 
     private lateinit var disposable: Disposable
 
-    val errorMessage: MutableLiveData<Int> = MutableLiveData()
+    val errorMessage: MutableLiveData<String> = MutableLiveData()
     val itemsList: MutableLiveData<List<Item>> = MutableLiveData()
 
     init {
@@ -29,7 +29,7 @@ class HomeViewModel : BaseViewModel() {
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(
                 { itemsList.value = it },
-                { errorMessage.value = R.string.post_error }
+                { errorMessage.value = it.message }
             )
     }
 
