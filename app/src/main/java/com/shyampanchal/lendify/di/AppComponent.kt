@@ -1,6 +1,6 @@
 package com.shyampanchal.lendify.di
 
-import com.shyampanchal.lendify.HomeActivity
+import com.shyampanchal.lendify.ui.HomeActivity
 import dagger.Component
 import javax.inject.Singleton
 

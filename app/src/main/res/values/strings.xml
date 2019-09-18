@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Lendify</string>
     <string name="post_error">Some error occurred.</string>
+    <string name="sign_in">Sign In</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="log_in">Log In</string>
 </resources>
