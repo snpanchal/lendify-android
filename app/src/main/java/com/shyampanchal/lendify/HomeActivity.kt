@@ -2,6 +2,7 @@ package com.shyampanchal.lendify
 
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -18,6 +19,7 @@ class HomeActivity : AppCompatActivity() {
         val vm = ViewModelProviders.of(this).get(HomeViewModel::class.java)
 
         vm.itemsList.observe(this, Observer { itemsList ->
+            loading_progress.visibility = View.GONE
             items_list.buildModelsWith {
                 it.apply {
                     var idValue = 0
@@ -27,8 +29,8 @@ class HomeActivity : AppCompatActivity() {
                         itemView {
                             id(idValue)
                             name(it.itemName)
-                            key1(it.key1)
-                            key2(it.key2)
+                            startDate(it.startTime)
+                            endTime(it.endTime)
                             idValue++
                         }
                     }
