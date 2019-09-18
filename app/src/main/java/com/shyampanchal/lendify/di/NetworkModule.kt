@@ -23,6 +23,6 @@ object NetworkModule {
                 .build()
 
     @Provides
-    @Sin
+    @Reusable
     fun provideItemsApi(retrofit: Retrofit) = retrofit.create(ItemsApi::class.java)
 }
