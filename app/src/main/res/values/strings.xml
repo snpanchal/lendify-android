@@ -4,7 +4,10 @@
     <string name="sign_in">Sign In</string>
     <string name="password">Password</string>
     <string name="email">E-mail</string>
-    <string name="log_in">Log In</string>
+    <string name="log_in_to_your_account">Log in to Your Account</string>
     <string name="login_error">Please check your username or password.</string>
     <string name="sign_up">Sign up</string>
+    <string name="register_for_an_account">Register for an Account</string>
+    <string name="log_in">Log In</string>
+    <string name="register_error">There was an error in signing up. Please try again later.</string>
 </resources>

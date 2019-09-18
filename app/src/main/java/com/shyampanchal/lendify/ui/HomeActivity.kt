@@ -7,6 +7,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import com.google.firebase.auth.FirebaseAuth
 import com.shyampanchal.lendify.R
 import com.shyampanchal.lendify.utils.DateUtils
 import com.shyampanchal.lendify.viewmodels.HomeViewModel
@@ -15,9 +16,15 @@ import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
 
+    val auth = FirebaseAuth.getInstance()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
+        if (auth.currentUser == null) {
+            startActivity(LoginActivity.newIntent(this))
+        }
 
         val vm = ViewModelProviders.of(this).get(HomeViewModel::class.java)
 

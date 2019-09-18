@@ -7,13 +7,13 @@
         tools:context=".ui.LoginActivity">
 
     <TextView
-            android:id="@+id/login_in_textview"
+            android:id="@+id/sign_up_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="32dp"
-            android:text="@string/log_in_to_your_account"
+            android:text="@string/register_for_an_account"
             android:textColor="@android:color/black"
             android:textSize="24sp"
             app:fontFamily="sans-serif"
@@ -21,7 +21,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/login_email"
+            android:id="@+id/register_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -31,7 +31,7 @@
             android:layout_marginRight="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/login_in_textview">
+            app:layout_constraintTop_toBottomOf="@+id/sign_up_textview">
 
         <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -40,7 +40,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/login_password"
+            android:id="@+id/register_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -50,7 +50,7 @@
             android:layout_marginRight="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/login_email">
+            app:layout_constraintTop_toBottomOf="@+id/register_email">
 
         <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -64,20 +64,20 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="56dp"
             android:background="@android:color/holo_orange_dark"
-            android:text="@string/sign_in"
+            android:text="@string/sign_up"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/login_password" />
+            app:layout_constraintTop_toBottomOf="@+id/register_password" />
 
     <Button
-            android:id="@+id/register_button"
+            android:id="@+id/login_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
             android:background="@android:color/holo_orange_dark"
-            android:text="@string/sign_up"
+            android:text="@string/log_in"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
             app:layout_constraintEnd_toEndOf="parent"
@@ -85,11 +85,11 @@
             app:layout_constraintTop_toBottomOf="@+id/sign_up_button" />
 
     <TextView
-            android:id="@+id/login_error"
+            android:id="@+id/register_error"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
-            android:text="@string/login_error"
+            android:text="@string/register_error"
             android:textColor="@android:color/holo_red_dark"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
