@@ -1,6 +1,5 @@
-package com.shyampanchal.lendify.injection.component
+package com.shyampanchal.lendify.di
 
-import com.shyampanchal.lendify.di.NetworkModule
 import com.shyampanchal.lendify.viewmodels.HomeViewModel
 import dagger.Component
 import javax.inject.Singleton
