@@ -1,5 +1,7 @@
 package com.shyampanchal.lendify.ui
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -40,5 +42,10 @@ class HomeActivity : AppCompatActivity() {
                 }
             }
         })
+    }
+
+    companion object {
+        fun newIntent(context: Context) =
+            Intent(context, HomeActivity::class.java)
     }
 }
