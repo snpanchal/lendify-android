@@ -1,7 +1,7 @@
 package com.shyampanchal.lendify.di
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
-import com.shyampanchal.lendify.api.ItemsApi
+import com.shyampanchal.lendify.api.ApiService
 import com.shyampanchal.lendify.utils.UrlManager
 import dagger.Module
 import dagger.Provides
@@ -24,5 +24,5 @@ object NetworkModule {
 
     @Provides
     @Reusable
-    fun provideItemsApi(retrofit: Retrofit) = retrofit.create(ItemsApi::class.java)
+    fun provideApiService(retrofit: Retrofit) = retrofit.create(ApiService::class.java)
 }

@@ -11,4 +11,7 @@
     <string name="log_in">Log In</string>
     <string name="register_error">There was an error in signing up. Please try again later.</string>
     <string name="add_item">Add Item</string>
+    <string name="full_name">Full Name</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="phone_number">Phone Number</string>
 </resources>

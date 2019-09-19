@@ -1,8 +1,7 @@
 package com.shyampanchal.lendify.viewmodels
 
 import androidx.lifecycle.MutableLiveData
-import com.shyampanchal.lendify.R
-import com.shyampanchal.lendify.api.ItemsApi
+import com.shyampanchal.lendify.api.ApiService
 import com.shyampanchal.lendify.base.BaseViewModel
 import com.shyampanchal.lendify.models.Item
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -12,7 +11,7 @@ import javax.inject.Inject
 
 class HomeViewModel : BaseViewModel() {
 
-    @Inject lateinit var itemsApi: ItemsApi
+    @Inject lateinit var apiService: ApiService
 
     private lateinit var disposable: Disposable
 
@@ -24,7 +23,7 @@ class HomeViewModel : BaseViewModel() {
     }
 
     private fun loadItems() {
-        disposable = itemsApi.getAllItems()
+        disposable = apiService.getAllItems()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(
